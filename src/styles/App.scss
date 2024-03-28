@@ -1,0 +1,76 @@
+$color-primario: #6eb4ff;
+$color-white: #ffffff;
+$color-hot: rgb(243, 166, 115);
+$color-cold: rgb(111, 216, 252);
+
+.App {
+    font-family: "Arial", sans-serif;
+    text-align: center;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.App-header {
+    background-color: $color-primario;
+    padding: 20px;
+    color: $color-white;
+    h1 {
+        font-size: 30px;
+        color: #ffffff;
+        text-shadow: 0 1px 0 #164c9c, 0 2px 0 #164c9c, 0 3px 0 #164c9c,
+            0 4px 0 #164c9c, 0 5px 0 #164c9c;
+    }
+}
+.App-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.climaCiudad {
+    margin-top: 40px;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: large;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+    .ciudadCard {
+        width: 100%;
+        max-width: 280px;
+        height: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+        border: 1px solid #ccc;
+        background-color: $color-white;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .temperatura {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .mensaje {
+        font-size: 18px;
+        margin-top: 10px;
+
+        &.calor {
+            color: $color-hot;
+        }
+
+        &.frio {
+            color: $color-cold;
+        }
+    }
+}
